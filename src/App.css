@@ -1,33 +1,144 @@
-.App {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+/*. regular styling starts from here. */
+body {
+  font-family: 'Roboto', sans-serif;
+  /*background-color: rgba(245,255,250,1);*/
+}
+
+input, textarea {
+  border: 1px solid rgba(30,144,255,0.3);
+  padding: 5px 10px;
+  margin: 0;
+  border-radius: 4px;
+  font-size: 15px;
+  /*background-color: rgba(245,255,250,1);*/
+}
+
+input:focus, input:hover, textarea:focus, textarea:hover, button:focus, button:hover {
+  border: 1px solid dodgerblue;
+  outline: none;
+  background-color: rgba(30,144,255,0.1);
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 15px;
+  color: rgba(30,144,255,0.3);
+}
+
+a {
+  color: rgba(0,0,0,0.7);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:hover {
+  color: rgba(0,0,0,0.7);
+  text-decoration:none;
+  cursor:pointer;  
+}
+
+
+.form-container {
+  display: block;
+  width: 30%;
+  margin: 50px auto;
+  /*background-color: rgba(30,144,255,0.1);*/
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 15px;
+  box-shadow: 0 0 3px 2px  rgba(0,0,0,0.1);
+  /*text-align: center;*/
+  /*min-height: 85%;*/
+}
+
+.input-wrapper {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-button {
+  margin: 20px auto;
+  border-radius: 7px;
+  color: rgba(70,130,180,1);
+  font-size: 16px;
+  padding: 5px 50px;
+  border: 1px solid rgba(30,144,255,0.3);
+}
+
+.button-wrapper {
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.text {
+  color: rgba(70,130,180,1);
+  padding: 5px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
