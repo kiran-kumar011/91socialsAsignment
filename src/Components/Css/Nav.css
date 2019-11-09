@@ -1,0 +1,22 @@
+
+.header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding: 10px 30px;
+	align-items: center;
+	background-color: rgba(30,144,255,0.7);
+}
+
+.active-nav {
+	border: 1px solid #00A0C6;
+}
+
+.header-links {
+	display: flex;
+	padding: 10px 0;
+}
+
+li {
+	padding: 0 20px;
+}
