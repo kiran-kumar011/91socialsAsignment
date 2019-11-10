@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
 
 
 const Input = (props) => {
-	const { type, label, placeholder, name, handlerFunction, value } = props;
-	console.log(value, 'props');
+	const { type, label, placeholder, name, handlerFunction, value, error } = props;
+	console.log(error, 'props');
 	return (
 		<div className='input-wrapper'>
 			<label className='text'>{label} :</label>
@@ -14,6 +16,7 @@ const Input = (props) => {
 				value={ value }
 				onChange={ handlerFunction }
 			/>
+			<p>{error}</p>
 		</div>
 	)
 }
