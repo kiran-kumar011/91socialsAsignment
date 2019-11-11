@@ -1,19 +1,53 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
+import { connect } from 'react-redux';
 
 
 // Importing components.
 import ContactForm from './Components/index';
+import ContactInfo from './Components/info';
 
 class App extends Component {
+	state ={
+		isUserAvailable: false,
+	}
+
+	
+
+	get isUserDataAvailable()  {
+		const data = Object.keys(this.props.userData);
+		if(data.length) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	validateUserData = () => this.setState({ isUserAvailable: true });
+	
+
   render() {
+  	const { isUserAvailable } = this.state;
+  	console.log(this.isUserDataAvailable, 'from app');
     return (
       <div className="App">
-        <ContactForm />
+	      {
+	      	isUserAvailable && this.isUserDataAvailable ? 
+	      	(<ContactInfo data={this.props.userData}/>)
+	      	:
+	      	(<ContactForm update={ this.validateUserData }/>)
+	      }
+        
+        
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+	return {
+		userData: state.userData
+	}
+}
+
+export default connect(mapStateToProps)(App);

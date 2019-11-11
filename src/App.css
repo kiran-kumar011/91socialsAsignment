@@ -52,12 +52,19 @@ table {
 /*. regular styling starts from here. */
 body {
   font-family: 'Roboto', sans-serif;
-  /*background: linear-gradient(to left, rgba(30,144,255,0.4), rgba(30,144,255,0.1));*/
-  /*background-color: rgba(245,255,250,1);*/
 }
 
-input, textarea {
+.input, input, .textarea {
   border: 1px solid rgba(30,144,255,0.3);
+  padding: 5px 10px;
+  margin: 0;
+  border-radius: 4px;
+  font-size: 15px;
+  color: rgba(70,130,180,1);
+}
+
+.error-input, .error-textarea {
+  border: 1px solid red;
   padding: 5px 10px;
   margin: 0;
   border-radius: 4px;
@@ -137,16 +144,57 @@ a:hover {
 
 p {
   text-align: center;
-  /*color: red;*/
 }
 
+.error {
+  font-size: 10px;
+  color: red;
+}
 
+.success {
+  font-size: 15px;
+  color: green;
+}
 
+.empty-space {
+  padding: 5px;
+}
 
+/*user info styling*/
+.user-icon {
+  text-align: center;
+  font-size: 30px;
+}
+ label {
+  /*font-weight: 900;*/
+  color: rgba(70,130,180,1);
+ }
+.info-fields {
+  display: grid;
+  grid-template-columns: 100px 2px 200px;
+  box-sizing: border-box;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-between;
+  overflow: wrap;
+  word-wrap: break-word;
+  border-bottom: 1px solid rgba(70,130,180,1);
+}
 
+.user-details-wrapper {
+  display: block;
+  margin: 0 auto;
+}
 
-
-
+.fa-user {
+  font-size: 120px;
+  border: 1px solid rgba(70,130,180,0.5);
+  padding: 30px 40px;
+  border-radius: 100%;
+  box-shadow: 0 0 3px 2px  rgba(0,0,0,0.1);
+  color: rgba(70,130,180,0.5);
+  margin: 10px;
+}
 
 
 
