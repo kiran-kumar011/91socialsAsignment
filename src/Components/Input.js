@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 
 
 
 const Input = (props) => {
-	const { type, label, placeholder, name, handlerFunction, value, error } = props;
-	console.log(error, 'props');
+	const { type, label, placeholder, name, handlerFunction, value, error, warningFields } = props;
 	return (
 		<div className='input-wrapper'>
 			<label className='text'>{label} :</label>
@@ -15,8 +13,9 @@ const Input = (props) => {
 				name={ name }
 				value={ value }
 				onChange={ handlerFunction }
+				className={ warningFields.includes(name) ? 'error-input' : 'input' }
 			/>
-			<p>{error}</p>
+			<p className={error ? 'error': 'empty-space'}>{error}</p>
 		</div>
 	)
 }
