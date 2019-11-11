@@ -50,7 +50,7 @@ class Contacts extends Component {
 		} 
 
 		if((phoneNumber.length < 10) || (phoneNumber.length > 12)
-			&& (!['0', '7', '8', '9'].indexOf(phoneNumber[0]) > -1)) {
+			|| !(['0', '7', '8', '9'].indexOf(phoneNumber[0]) > -1)) {
 			phoneNumberError = 'Please Enter valid Mobile Number*';
 			fields.push('phoneNumber');
 		} 
