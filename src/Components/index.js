@@ -6,11 +6,11 @@ import { addUserData } from '../Actions';
 
 class Contacts extends Component {
 	state={
-		name 						: 'kiran',
-		email 					: 'kiran@gmail.com',
-		phoneNumber 		: '9900546772',
-		address 				: 'dasdasdasdjdagsvbnasvcdkagvdjahsdvkjhasvdjmasg hakjscv ansbv gfvasjas jasfdvjas dkaygsdas asydgahs kjaysfvia ',
-		password 				: 'Kiran@123',
+		name 						: '',
+		email 					: '',
+		phoneNumber 		: '',
+		address 				: '',
+		password 				: '',
 		nameError				: '',
 		emailError 			: '',
 		phoneNumberError: '',
