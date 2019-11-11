@@ -6,11 +6,11 @@ import { addUserData } from '../Actions';
 
 class Contacts extends Component {
 	state={
-		name 						: 'kiran',
-		email 					: 'kiran@gmail.com',
-		phoneNumber 		: '9900546772',
-		address 				: 'dasdasdasdjdagsvbnasvcdkagvdjahsdvkjhasvdjmasg hakjscv ansbv gfvasjas jasfdvjas dkaygsdas asydgahs kjaysfvia ',
-		password 				: 'Kiran@123',
+		name 						: '',
+		email 					: '',
+		phoneNumber 		: '',
+		address 				: '',
+		password 				: '',
 		nameError				: '',
 		emailError 			: '',
 		phoneNumberError: '',
@@ -49,7 +49,7 @@ class Contacts extends Component {
 			fields.push('email')
 		} 
 
-		if((phoneNumber.length < 10 || phoneNumber.length > 12)
+		if((phoneNumber.length < 10) || (phoneNumber.length > 12)
 			&& (!['0', '7', '8', '9'].indexOf(phoneNumber[0]) > -1)) {
 			phoneNumberError = 'Please Enter valid Mobile Number*';
 			fields.push('phoneNumber');
@@ -208,7 +208,7 @@ class Contacts extends Component {
 						</div>
 						<div>
 								{
-									!isButtonDisabled ? 
+									!isButtonDisabled && this.displaySubmitButton ? 
 									(
 										<div className='button-wrapper'>
 											<button className='submit-button' type='submit' onClick={ this.submitForm }>
